@@ -1,6 +1,8 @@
+from pathlib import Path
 import joblib
 
-MODEL_PATH = "models/category_classifier.pkl"
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_PATH = BASE_DIR / "models" / "category_classifier.pkl"
 
 model = joblib.load(MODEL_PATH)
 

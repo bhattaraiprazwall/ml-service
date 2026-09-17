@@ -14,6 +14,15 @@ app = FastAPI(
 )
 
 
+@app.get("/")
+def root():
+    return {
+        "status": "healthy",
+        "service": "SpendSmart ML Service",
+        "version": "1.0.0",
+    }
+
+
 @app.get("/health")
 def health_check():
     return {
